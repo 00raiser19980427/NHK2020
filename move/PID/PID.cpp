@@ -18,7 +18,7 @@ float PID::PIDout(float measured,float target){
 	i[0]= i[1];
     i[1] =target - measured ;
 	if(i[0]*i[1] > 0){
-		integral = integral + (i[0] + i[1]) / 2 * 0.005;//0.005‚Í§ŒäüŠúdt(msec)
+		integral = integral + (i[0] + i[1]) / 2 * 0.005; //0.05 is Control cycle time[5msec]
 	}
-    return *KP * i[1] + *KI * integral + *KD * (i[1] - i[0]) / 0.005;
+    return *KP * i[1] + *KI * integral + *KD * (i[1] - i[0]) / 0.005; //0.05 is Control cycle time[5msec]
 }

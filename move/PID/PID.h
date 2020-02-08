@@ -26,7 +26,7 @@ class PID
 		i[0]=0;
 		i[1]=0;
 	}
-    void set_PID_constant(float kp,float ki,float kd);
+    void set_PID_constant(float kp,float ki,float kd);	//Call each function before "while()" in main.cpp
 	float PIDout(float,float);
 
 };
