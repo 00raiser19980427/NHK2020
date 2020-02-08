@@ -30,7 +30,9 @@ private:
 	bool flag;
 public:
 	move();
-	PID pid;
+	PID PIDx;
+	PID PIDy;
+	PID PIDyaw;
 	bool moveRobot(int num , int t);
 
 	move(LowlayerHandelTypedef *hlow):myhlow(hlow){};

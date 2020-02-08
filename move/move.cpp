@@ -17,9 +17,9 @@ bool move::moveRobot(int num , int t){
 	}
 	ffx=ff.ffout(rs.x0,rs.x1);
 	ffy=ff.ffout(rs.y0,rs.y1);
-	pidx = pid.PIDout(myhlow->loca.GetX(), rs.x0);
-	pidy = pid.PIDout(myhlow->loca.GetY(), rs.y0);
-	pidyaw = pid.PIDout(myhlow->loca.GetYaw() , rs.yaw);
+	pidx = PIDx.PIDout(myhlow->loca.GetX(), rs.x0);
+	pidy = PIDy.PIDout(myhlow->loca.GetY(), rs.y0);
+	pidyaw = PIDyaw.PIDout(myhlow->loca.GetYaw() , rs.yaw);
 	dis.distribute(ffx+pidx, ffy+pidy, pidyaw, myhlow->loca.GetYaw());
 	myhlow->M1.SetVelocity(dis.V1);
 	myhlow->M2.SetVelocity(dis.V2);
