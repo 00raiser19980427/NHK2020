@@ -14,10 +14,10 @@
 class robot {
 private:
 	LowlayerHandelTypedef *myhlow;
-	move *mv;
 	int num;
 	int t;
 public:
+	move *mv;
 	robot(move *_mv):mv(_mv){
 		num = 0;
 		t = 0;
