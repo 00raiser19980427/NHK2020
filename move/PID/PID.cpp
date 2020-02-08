@@ -14,9 +14,9 @@ void PID::set_PID_constant(float kp,float ki,float kd){
 	KD = &kd;
 }
 
-float PID::PIDout(float measured,float *target){
+float PID::PIDout(float *measured,float *target){
 	i[0]= i[1];
-    i[1] =*target - measured ;
+    i[1] =*target - *measured ;
 	if(i[0]*i[1] > 0){
 		integral = integral + (i[0] + i[1]) / 2 * 0.005; //0.005 is Control cycle time[5msec]
 	}
