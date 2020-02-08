@@ -32,6 +32,7 @@ public:
 	move();
 	PID pid;
 	bool moveRobot(int num , int t);
+
 	move(LowlayerHandelTypedef *hlow):myhlow(hlow){};
 };
 

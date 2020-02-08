@@ -15,7 +15,6 @@ bool move::moveRobot(int num , int t){
 	if(rs.pointOutput(num,t)){
 		flag = true;
 	}
-	else return false;
 	ffx=ff.ffout(rs.x0,rs.x1);
 	ffy=ff.ffout(rs.y0,rs.y1);
 	pidx = pid.PIDout(myhlow->loca.GetX(), rs.x0);
@@ -31,6 +30,5 @@ bool move::moveRobot(int num , int t){
 		flag = false;
 		return true;
 	}
-	return false;
-
+	else return false;
 }
