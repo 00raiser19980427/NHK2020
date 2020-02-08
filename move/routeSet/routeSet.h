@@ -14,23 +14,23 @@
 
 class routeSet {
 private:
-	float t_set;
-	float time;
-	bool flag;
-	int jud;
-	const int fin_route=10000;
+	float *time;					//for function of route //200count per 1sec //decide time
+	bool  flag;					//for change phase of one cycle route
+	int   jud;					//for change function of route
+	const int fin_route=10000;	//finish phase number
 	routeShape route;
 
 public:
 	routeSet();
 
-	float x0;
-	float x1;
-	float y0;
-	float y1;
-	float yaw;
+	float *x0;	//current position
+	float *x1;	//before position
+	float *y0;	//current position
+	float *y1;	//next position
+	float *yaw;	//next angle //if you change angle of machine, you have to integral "yaw"
 
-	bool pointOutput(int num , int t);
+	bool pointOutput(int *num , int *t); 	//calculate necessary Volume(x0,x1,y0,y1)
+
 };
 
 #endif /* HIROKI_ROUTESET_H_ */

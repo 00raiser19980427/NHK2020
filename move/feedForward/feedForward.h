@@ -11,6 +11,6 @@
 class feedForward {
 
 public:
-	float ffout(float t0 , float t1);
+	float ffout(float *t0 , float *t1); //calculate necessary Volume for feedforward
 };
 #endif /* HIROKI_FEEDFORWARD_H_ */

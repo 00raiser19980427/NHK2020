@@ -14,15 +14,17 @@
 class robot {
 private:
 	LowlayerHandelTypedef *myhlow;
-	int num;
-	int t;
+	int num;						//"num" is each phase number
+	int t;							//Add one per 5[msec] ,every calling
 public:
 	move *mv;
-	robot(move *_mv):mv(_mv){
-		num = 0;
+	robot(move *_mv):mv(_mv){	//Initialize
+		num = 0;				//If you want to "zero_position", change to "num = 100"
 		t = 0;
 	};
-	void PRflow();
+	void PRflow();				//Called in "while ()" of main.cpp //for pass_robot
+	void TRflow();				//Called in "while ()" of main.cpp //for try_robot
+	void zeroPosition();		//Called in "while ()" of main.cpp //for zero position
 };
 
 #endif /* HIROKI_ROBOT_H_ */

@@ -12,7 +12,7 @@ move::move(){
 }
 
 bool move::moveRobot(int num , int t){
-	if(rs.pointOutput(num,t)){
+	if(rs.pointOutput(&num,&t)){
 		flag = true;
 	}
 	ffx=ff.ffout(rs.x0,rs.x1);
