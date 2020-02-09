@@ -27,7 +27,7 @@ class PID
 		i[1]=0;
 	}
     void set_PID_constant(float kp,float ki,float kd);	//Call each function(x,y,yaw) before "while()" in main.cpp
-	float PIDout(float *measured,float *target); 			//calculate necessary Volume for PID
+	float PIDout(float measured,float *target); 			//calculate necessary Volume for PID
 
 };
 
